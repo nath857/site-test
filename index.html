@@ -3,30 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Votre société de déménagement — Devis gratuit</title>
-<meta name="description" content="Déménagement particuliers & entreprises. Formules adaptées, garde-meubles, accompagnement et devis gratuit.">
+<title>DSE — Nettoyage, Mobilier, Archivage & Déménagement</title>
+<meta name="description" content="DSE : +10 ans d’expérience en Bourgogne–Franche-Comté. Nettoyage de sièges, vente & installation de mobilier de bureau, archivage/stockage, déménagement. Devis gratuit.">
 <link rel="stylesheet" href="styles.css">
 <script defer src="script.js"></script>
 
-<!-- Données structurées basiques -->
+<!-- Données structurées -->
 <script type="application/ld+json">
 {
-"@context":"https://schema.org",
-"@type":"MovingCompany",
-"name":"Votre Entreprise",
-"url":"https://ton-pseudo.github.io/mon-site/",
-"areaServed":"France",
-"telephone":"+33 1 23 45 67 89"
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "DSE",
+"url": "https://ton-pseudo.github.io/mon-site/",
+"description": "Nettoyage de sièges, mobilier de bureau, archivage/stockage, déménagement.",
+"areaServed": "Bourgogne–Franche-Comté",
+"foundingDate": "2014",
+"contactPoint": {
+"@type": "ContactPoint",
+"telephone": "+33630103396",
+"contactType": "customer service",
+"email": "Largynathan1@gmail.com"
+},
+"knowsAbout": ["Nettoyage de sièges","Mobilier de bureau","Archivage","Stockage","Déménagement"],
+"sameAs": []
 }
 </script>
 </head>
 <body>
-<!-- En-tête -->
 <header class="site-header">
 <div class="container header-inner">
 <a class="brand" href="#accueil" aria-label="Accueil">
-<div class="logo" aria-hidden="true">VE</div>
-<span class="brand-text">Votre&nbsp;Entreprise</span>
+<!-- 🔶 Mets ton fichier logo ici (voir plus bas) -->
+<img class="brand-logo" src="logo-dse.png" alt="DSE">
+<span class="brand-text">LE SENS DU SERVICE</span>
 </a>
 
 <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
@@ -34,254 +43,170 @@
 </button>
 
 <nav id="menu" class="site-nav" aria-label="Navigation principale">
-<a href="#services">Déménagement</a>
-<a href="#entreprise">Facility</a>
-<a href="#garde">Garde-meubles</a>
-<a href="#apropos">Notre histoire</a>
-<a href="#agences">Nos agences</a>
-<a href="#actu">Blog</a>
-<a class="btn small" href="#devis">Devis gratuit</a>
+<a href="#services">Services</a>
+<a href="#references">Références</a>
+<a href="#secteurs">Secteurs</a>
+<a href="#apropos">À propos</a>
+<a href="#contact" class="btn small">Devis gratuit</a>
 </nav>
 </div>
 </header>
 
 <main id="accueil">
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
 <div class="container hero-inner">
-<h1>Société de déménagement<br><span>à votre service</span></h1>
-<p>Particuliers & professionnels — formules adaptées, accompagnement de A à Z, assurance incluse.</p>
+<div class="hero-text">
+<h1>DSE<br><span>Nettoyage & Services professionnels</span></h1>
+<p><strong>+10 ans</strong> d’accompagnement : nettoyage de sièges, vente & installation de mobilier de bureau, archivage/stockage et déménagement — en Bourgogne–Franche-Comté.</p>
 <div class="cta">
-<a class="btn primary" href="#devis">Obtenir mon devis</a>
-<a class="btn" href="#services">Découvrir nos offres</a>
+<a class="btn primary" href="#contact">Demander un devis</a>
+<a class="btn" href="#services">Voir nos services</a>
+</div>
+<ul class="check hero-check">
+<li>Interventions rapides & soignées</li>
+<li>Matériels & produits pro</li>
+<li>Assurance & traçabilité</li>
+</ul>
+</div>
+<div class="hero-media">
+<!-- Mets une photo (ex: votre visuel siège) renommée en hero-dse.jpg -->
+<img src="hero-dse.jpg" alt="Nettoyage de sièges DSE">
 </div>
 </div>
 </section>
 
-<!-- Arguments / badges -->
-<section class="highlights">
-<div class="container grid three">
-<div class="badge">
-<strong>+25 ans</strong>
-<span>d’expérience</span>
-</div>
-<div class="badge">
-<strong>3 formules</strong>
-<span>adaptées</span>
-</div>
-<div class="badge">
-<strong>Assurance</strong>
-<span>incluse</span>
-</div>
-</div>
-</section>
-
-<!-- Services principaux -->
+<!-- SERVICES -->
 <section id="services" class="section">
 <div class="container">
-<h2>Nos services pour un déménagement serein</h2>
+<h2>Nos services</h2>
 <div class="grid two cards">
 <article class="card">
-<img src="https://picsum.photos/seed/particuliers/640/360" alt="" loading="lazy">
+<img src="https://picsum.photos/seed/siege/720/420" alt="">
 <div class="card-body">
-<h3>Déménagement de particuliers</h3>
-<p>Différents niveaux de prestation, cartons, démontage/remontage, protection et mise en place.</p>
-<a class="link" href="#devis">Demander un devis</a>
+<h3>Nettoyage de sièges</h3>
+<p>Profondeur tissus & cuirs : élimination des taches, odeurs & bactéries, séchage rapide.</p>
+<a class="link" href="#contact">Obtenir un devis</a>
 </div>
 </article>
 <article class="card">
-<img src="https://picsum.photos/seed/entreprise/640/360" alt="" loading="lazy">
+<img src="https://picsum.photos/seed/mobilier/720/420" alt="">
 <div class="card-body">
-<h3>Déménagement d’entreprise</h3>
-<p>Transferts de bureaux, stockage, planning par phases pour limiter l’impact sur votre activité.</p>
-<a class="link" href="#devis">Parler à un expert</a>
+<h3>Vente & installation de mobilier</h3>
+<p>Bureaux, sièges, rangements, cloisons — conseil, livraison, montage & mise en service.</p>
+<a class="link" href="#contact">Parler à un conseiller</a>
+</div>
+</article>
+<article class="card">
+<img src="https://picsum.photos/seed/archivage/720/420" alt="">
+<div class="card-body">
+<h3>Archivage & stockage</h3>
+<p>Gestion, conditionnement et stockage sécurisé de vos archives et matériels.</p>
+<a class="link" href="#contact">Demander une étude</a>
+</div>
+</article>
+<article class="card">
+<img src="https://picsum.photos/seed/demenagement/720/420" alt="">
+<div class="card-body">
+<h3>Déménagement</h3>
+<p>Transfert de bureaux, manutention, protection & reprise, planning pour limiter l’arrêt d’activité.</p>
+<a class="link" href="#contact">Planifier un transfert</a>
 </div>
 </article>
 </div>
 </div>
 </section>
 
-<!-- Logos clients -->
-<section class="section alt">
+<!-- RÉFÉRENCES -->
+<section id="references" class="section alt">
 <div class="container">
 <h2>Ils nous font confiance</h2>
-<div class="logos">
-<img src="https://dummyimage.com/140x60/eee/444.png&text=Client+1" alt="Client 1" loading="lazy">
-<img src="https://dummyimage.com/140x60/eee/444.png&text=Client+2" alt="Client 2" loading="lazy">
-<img src="https://dummyimage.com/140x60/eee/444.png&text=Client+3" alt="Client 3" loading="lazy">
-<img src="https://dummyimage.com/140x60/eee/444.png&text=Client+4" alt="Client 4" loading="lazy">
-<img src="https://dummyimage.com/140x60/eee/444.png&text=Client+5" alt="Client 5" loading="lazy">
+<p class="muted">Notamment dans le secteur bancaire depuis plus de 10 ans.</p>
+<div class="chips">
+<!-- texte par défaut ; remplace par des logos si tu as les droits -->
+<span class="chip">Banque Populaire</span>
+<span class="chip">Caisse d’Épargne</span>
+<span class="chip">Entreprises & Collectivités</span>
 </div>
 </div>
 </section>
 
-<!-- À propos -->
+<!-- SECTEURS -->
+<section id="secteurs" class="section">
+<div class="container">
+<h2>Bourgogne–Franche-Comté</h2>
+<div class="chips">
+<span class="chip">Dijon</span>
+<span class="chip">Besançon</span>
+<span class="chip">Toute la région</span>
+</div>
+</div>
+</section>
+
+<!-- À PROPOS -->
 <section id="apropos" class="section">
 <div class="container grid two">
 <div>
-<h2>Notre société</h2>
-<p>Entreprise familiale, savoir-faire reconnu, équipe formée aux meilleures pratiques et matériel adapté.</p>
+<h2>À propos de DSE</h2>
+<p>Entreprise de services professionnels, DSE s’engage sur la qualité, la sécurité et la proximité. Nos équipes formées interviennent avec du matériel adapté et des procédures claires.</p>
 <ul class="check">
-<li>Planification et accompagnement</li>
-<li>Protection et manutention soignées</li>
-<li>Suivi qualité et satisfaction</li>
+<li>Conseil & devis gratuits</li>
+<li>Suivi & interlocuteur dédié</li>
+<li>Traçabilité & reporting</li>
 </ul>
-<a class="btn" href="#devis">En savoir plus</a>
 </div>
 <div class="media-card">
-<img src="https://picsum.photos/seed/equipe/720/480" alt="" loading="lazy">
+<img src="https://picsum.photos/seed/equipe/720/480" alt="">
 </div>
 </div>
 </section>
 
-<!-- Certifications -->
-<section class="section alt">
-<div class="container">
-<h2>Nos certifications</h2>
-<div class="grid four certs">
-<img src="https://dummyimage.com/160x80/eee/444.png&text=Cert+1" alt="Certification 1" loading="lazy">
-<img src="https://dummyimage.com/160x80/eee/444.png&text=Cert+2" alt="Certification 2" loading="lazy">
-<img src="https://dummyimage.com/160x80/eee/444.png&text=Cert+3" alt="Certification 3" loading="lazy">
-<img src="https://dummyimage.com/160x80/eee/444.png&text=Cert+4" alt="Certification 4" loading="lazy">
-</div>
-</div>
-</section>
-
-<!-- Statistiques -->
-<section class="section">
-<div class="container">
-<h2>Quelques chiffres</h2>
-<div class="grid four stats">
-<div class="stat">
-<span class="count" data-target="4000">0</span>
-<small>Clients depuis 1995</small>
-</div>
-<div class="stat">
-<span class="count" data-target="25">0</span>
-<small>Employés à votre service</small>
-</div>
-<div class="stat">
-<span class="count" data-target="10">0</span>
-<small>Véhicules dans la flotte</small>
-</div>
-<div class="stat">
-<span class="count" data-target="25">0</span>
-<small>Années d’expérience</small>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Liste services étendue -->
-<section class="section alt">
-<div class="container grid two">
-<div>
-<h2>Découvrez tous nos services</h2>
-<ul class="list">
-<li><strong>Groupage</strong> — payez seulement l’aller simple.</li>
-<li><strong>Déménagement international</strong> — formalités & logistique.</li>
-<li><strong>Garde-meubles</strong> — accès facile, lieux surveillés.</li>
-<li><strong>Déménagement tout compris</strong> — cartons 24h, changement d’adresse…</li>
-</ul>
-</div>
-<div id="garde" class="media-card">
-<img src="https://picsum.photos/seed/garde/720/480" alt="" loading="lazy">
-</div>
-</div>
-</section>
-
-<!-- Secteurs -->
-<section id="agences" class="section">
-<div class="container">
-<h2>Nos secteurs d’activité</h2>
-<div class="chips">
-<a class="chip" href="#">Besançon (25000)</a>
-<a class="chip" href="#">Dijon (21000)</a>
-<a class="chip" href="#">Dole (39100)</a>
-<a class="chip" href="#">Montbéliard (25200)</a>
-<a class="chip" href="#">Vesoul (70000)</a>
-</div>
-</div>
-</section>
-
-<!-- Blog / Actu -->
-<section id="actu" class="section alt">
-<div class="container">
-<h2>Notre actualité</h2>
-<div class="grid three cards">
-<article class="card post">
-<img src="https://picsum.photos/seed/post1/640/360" alt="">
-<div class="card-body">
-<h3>Comment bien préparer son déménagement</h3>
-<p>Nos conseils pour organiser votre départ sans stress.</p>
-<a class="link" href="#">Lire l’article</a>
-</div>
-</article>
-<article class="card post">
-<img src="https://picsum.photos/seed/post2/640/360" alt="">
-<div class="card-body">
-<h3>Transfert d’entreprise : réussir chaque étape</h3>
-<p>Checklist pratique pour une reprise d’activité rapide.</p>
-<a class="link" href="#">Lire l’article</a>
-</div>
-</article>
-<article class="card post">
-<img src="https://picsum.photos/seed/post3/640/360" alt="">
-<div class="card-body">
-<h3>Garde-meubles : comment bien choisir</h3>
-<p>Volume, sécurité, accès : le point complet.</p>
-<a class="link" href="#">Lire l’article</a>
-</div>
-</article>
-</div>
-</div>
-</section>
-
-<!-- Devis -->
-<section id="devis" class="section cta-devis">
+<!-- CONTACT -->
+<section id="contact" class="section cta-devis">
 <div class="container center">
-<h2>Obtenez votre devis gratuit</h2>
-<p>Réponse sous 24h par notre équipe.</p>
+<h2>Contact & devis</h2>
+<p>
+<a class="cta-link" href="tel:+33630103396">📞 06 30 10 33 96</a> •
+<a class="cta-link" href="mailto:Largynathan1@gmail.com">✉️ Largynathan1@gmail.com</a>
+</p>
 <form class="inline-form" action="#" method="post">
 <input type="text" name="name" placeholder="Votre nom" required>
 <input type="email" name="email" placeholder="Votre email" required>
-<button class="btn primary" type="submit">Demander un devis</button>
+<input type="text" name="service" placeholder="Service souhaité (ex: Nettoyage de sièges)">
+<button class="btn primary" type="submit">Envoyer</button>
 </form>
 </div>
 </section>
 </main>
 
-<!-- Pied de page -->
 <footer class="site-footer">
 <div class="container footer-grid">
 <div>
-<h4>Nos services</h4>
+<h4>DSE</h4>
+<p>LE SENS DU SERVICE</p>
+<small>© <span id="year"></span> DSE — Tous droits réservés.</small>
+</div>
+<div>
+<h4>Services</h4>
 <ul>
-<li><a href="#services">Particuliers</a></li>
-<li><a href="#services">Transfert de bureau</a></li>
-<li><a href="#garde">Garde-meubles</a></li>
+<li><a href="#services">Nettoyage de sièges</a></li>
+<li><a href="#services">Mobilier de bureau</a></li>
+<li><a href="#services">Archivage & stockage</a></li>
+<li><a href="#services">Déménagement</a></li>
 </ul>
 </div>
 <div>
-<h4>Pour les pros</h4>
+<h4>Entreprise</h4>
 <ul>
-<li><a href="#entreprise">Facility management</a></li>
-<li><a href="#services">Mobilier & aménagement</a></li>
-<li><a href="#services">Travaux de bâtiment</a></li>
-</ul>
-</div>
-<div>
-<h4>À propos</h4>
-<ul>
-<li><a href="#apropos">Notre histoire</a></li>
-<li><a href="#agences">Nos agences</a></li>
-<li><a href="#actu">Blog</a></li>
+<li><a href="#references">Références</a></li>
+<li><a href="#secteurs">Secteurs</a></li>
+<li><a href="#apropos">À propos</a></li>
 </ul>
 </div>
 <div>
 <h4>Contact</h4>
-<p>+33 1 23 45 67 89<br>contact@votre-entreprise.fr</p>
-<small>© <span id="year"></span> Votre Entreprise — Tous droits réservés.</small>
+<p><a href="tel:+33630103396">06 30 10 33 96</a><br>
+<a href="mailto:Largynathan1@gmail.com">Largynathan1@gmail.com</a></p>
 </div>
 </div>
 </footer>
