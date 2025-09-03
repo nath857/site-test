@@ -1,69 +1,52 @@
-/* ====== Styles de base ====== */
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-line-height: 1.6;
-background: #0b1220;
-color: #e5e7eb;
+// Menu mobile
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.site-nav');
+if (navToggle && nav){
+navToggle.addEventListener('click', () => {
+const open = nav.classList.toggle('open');
+navToggle.setAttribute('aria-expanded', String(open));
+});
 }
 
-/* ====== Navigation ====== */
-.site-header {
-background: #111827;
-padding: 10px 20px;
-position: sticky;
-top: 0;
-}
-.site-header nav {
-display: flex;
-gap: 20px;
-justify-content: center;
-}
-.site-header a {
-color: #e5e7eb;
-text-decoration: none;
-}
-.site-header a:hover {
-color: #0ea5e9;
-}
+// Année dynamique dans le footer
+const yearEl = document.getElementById('year');
+if (yearEl){ yearEl.textContent = new Date().getFullYear(); }
 
-/* ====== Sections ====== */
-.hero {
-padding: 80px 20px;
-text-align: center;
-background: linear-gradient(180deg, #0ea5e9, #22d3ee);
-color: #00131a;
+// Compteurs animés
+const counters = document.querySelectorAll('.count');
+const animateCounters = () => {
+counters.forEach(el => {
+const target = Number(el.getAttribute('data-target') || '0');
+const current = Number(el.textContent.replace(/\D/g,'') || 0);
+const inc = Math.ceil(target / 60);
+if (current < target){
+el.textContent = current + inc > target ? target : current + inc;
 }
-section {
-padding: 60px 20px;
-max-width: 900px;
-margin: auto;
+});
+};
+let started = false;
+const onScroll = () => {
+const stats = document.querySelector('.stats');
+if (!stats || started) return;
+const rect = stats.getBoundingClientRect();
+if (rect.top < window.innerHeight && rect.bottom > 0){
+started = true;
+const id = setInterval(() => {
+animateCounters();
+const done = [...counters].every(el => Number(el.textContent) >= Number(el.dataset.target));
+if (done) clearInterval(id);
+}, 20);
 }
-h1, h2 {
-margin-bottom: 20px;
-}
-form {
-display: grid;
-gap: 12px;
-}
-input, textarea, button {
-padding: 10px;
-border-radius: 6px;
-border: 1px solid #ccc;
-}
-button {
-background: #0ea5e9;
-color: white;
-cursor: pointer;
-}
-button:hover {
-background: #0284c7;
-}
+};
+window.addEventListener('scroll', onScroll);
+onScroll();
 
-/* ====== Pied de page ====== */
-footer {
-text-align: center;
-padding: 20px;
-background: #111827;
-color: #94a3b8;
+// Faux envoi du formulaire devis
+document.addEventListener('submit', (e) => {
+const form = e.target.closest('.inline-form');
+if (form){
+e.preventDefault();
+alert('Merci ! Votre demande de devis a été envoyée (simulation).');
+form.reset();
 }
+});
