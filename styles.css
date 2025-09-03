@@ -8,45 +8,16 @@ navToggle.setAttribute('aria-expanded', String(open));
 });
 }
 
-// Année dynamique dans le footer
+// Année dynamique
 const yearEl = document.getElementById('year');
 if (yearEl){ yearEl.textContent = new Date().getFullYear(); }
 
-// Compteurs animés
-const counters = document.querySelectorAll('.count');
-const animateCounters = () => {
-counters.forEach(el => {
-const target = Number(el.getAttribute('data-target') || '0');
-const current = Number(el.textContent.replace(/\D/g,'') || 0);
-const inc = Math.ceil(target / 60);
-if (current < target){
-el.textContent = current + inc > target ? target : current + inc;
-}
-});
-};
-let started = false;
-const onScroll = () => {
-const stats = document.querySelector('.stats');
-if (!stats || started) return;
-const rect = stats.getBoundingClientRect();
-if (rect.top < window.innerHeight && rect.bottom > 0){
-started = true;
-const id = setInterval(() => {
-animateCounters();
-const done = [...counters].every(el => Number(el.textContent) >= Number(el.dataset.target));
-if (done) clearInterval(id);
-}, 20);
-}
-};
-window.addEventListener('scroll', onScroll);
-onScroll();
-
-// Faux envoi du formulaire devis
+// Faux envoi du formulaire (remplacer l'action par Formspree pour un vrai envoi)
 document.addEventListener('submit', (e) => {
 const form = e.target.closest('.inline-form');
 if (form){
 e.preventDefault();
-alert('Merci ! Votre demande de devis a été envoyée (simulation).');
+alert('Merci ! Votre demande a bien été envoyée (simulation).');
 form.reset();
 }
 });
